@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жёлтый аудиоплеер</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #fef9e0;
+        }
+        .player-card {
+            background: #ffeb99;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 520px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            border: 1px solid #f7d44a;
+        }
+        .cover {
+            width: 110px;
+            height: 110px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+            border: 2px solid #f7b32b;
+            flex-shrink: 0;
+        }
+        .info {
+            flex: 1;
+            min-width: 0;
+        }
+        h2 {
+            color: #b85c00;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 6px 0;
+        }
+        .artist {
+            color: #b87333;
+            font-size: 14px;
+            margin: 0 0 14px 0;
+            font-weight: 500;
+        }
+        audio {
+            width: 100%;
+            height: 42px;
+        }
+        audio::-webkit-media-controls-panel {
+            background-color: #ffd966;
+        }
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #7a4c00;
+        }
+        audio::-webkit-media-controls-play-button {
+            background-color: #ffb347;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-card">
+        <img class="cover" src="507dbc93ce1a9cc02d5e9c6492efa08e.jpg" alt="Обложка">
+        <div class="info">
+            <h2>🎵 Жёлтая мелодия</h2>
+            <p class="artist">Название трека</p>
+            <audio controls>
+                <source src="3_06.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает аудиоплеер
+            </audio>
+        </div>
+    </div>
+</body>
+</html>
